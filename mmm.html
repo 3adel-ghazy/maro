@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disney</title>
+
+    <style>
+        body {
+            background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <button onclick="showMessage()">Click here</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById("name").value.trim().toLowerCase();
+            let message = document.getElementById("message");
+
+            if (name === "مريم" || name === "maryam" || name === "mariam") {
+                message.innerText = "💗كل سنه وانتي طيبه يا أميرة ديزني ";
+            } else {
+                message.innerText = "لا سوري مش عايزينك انت ";
+            }
+        }
+    </script>
+
+</body>
+</html>
